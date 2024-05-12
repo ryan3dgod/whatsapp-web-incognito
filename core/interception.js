@@ -186,6 +186,7 @@ function onDeletionMessageBlocked(message, remoteJid, messageId, deletedMessageI
     if (messageNode)
     {
         messageNode.setAttribute("deleted-message", "true");     // mark the message in red
+        messageNode.style.color = "red";                         // change the color of the message text to red
     }
 
     document.dispatchEvent(new CustomEvent("pseudoMsgs", {
